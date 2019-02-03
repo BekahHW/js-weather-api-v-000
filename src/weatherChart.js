@@ -37,4 +37,11 @@ function makeRequest(endpoint, canvas) {
   // const chartDataset = generateDataSet(formattedHours, formattedTemps)
   // append the chart to the DOM
   // new Chart(canvas, chartDataset)
+  fetch("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/7b6a4fc55b830b8c6af3a0cdced9e6ee/42.3601,-71.0589")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  });
 }
